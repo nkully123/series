@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
