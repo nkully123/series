@@ -12,3 +12,15 @@ body {
 .bg-poppy-red {
   background-color: #ef5350 !important;
 }
+
+
+
+
+.clearfix::after
+ {
+
+  clear: both;
+  display: table;
+}
+
+

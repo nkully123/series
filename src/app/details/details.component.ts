@@ -10,6 +10,17 @@ export class DetailsComponent implements OnInit
 {
 
   characters:any[];
+  selectedCharecter:any;
+
+
+
+
+  refinedCharacterInfo:any[];
+
+
+
+
+
 
   constructor(private detailService:DetailService) { }
   
@@ -18,9 +29,20 @@ export class DetailsComponent implements OnInit
     this.detailService.get().subscribe((detail:any)=>{
       this.characters = detail;
       console.log(this.characters)
+
+
+      for (let index = 0; index < this.characters.length; index++) 
+      {
+        this.refinedCharacterInfo = this.characters[index];
+        
+      }
+      
     })
-    
   }
   
-
+  selectCharecter(cast:any){
+    console.log(cast);
+    this.selectedCharecter =cast;
+  }
+  
 }
