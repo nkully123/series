@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DetailService } from '../detail.service';
 
 @Component({
   selector: 'app-details',
@@ -8,11 +9,18 @@ import { Component, OnInit } from '@angular/core';
 export class DetailsComponent implements OnInit 
 {
 
-  constructor() { }
+  characters:any[];
 
+  constructor(private detailService:DetailService) { }
+  
   ngOnInit(): void 
   {
+    this.detailService.get().subscribe((detail:any)=>{
+      this.characters = detail;
+      console.log(this.characters)
+    })
     
   }
+  
 
 }
