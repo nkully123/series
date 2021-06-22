@@ -1,31 +1,52 @@
 
- <div class="row">
-    <div class="col-md-6 offset-md-4"> 
-      <div class="block">
-         <h1>The Breaking Bad Cast-App</h1>
-          <div class="card" style="width: 30rem;">
-              <img
-                src="https://mdbootstrap.com/img/new/standard/city/062.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Charecter Name</h5>
-                <p class="card-text">
-                  Charecter Tittle............................
-                  ............................................
-                </p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Nick Name</li>
-                <li class="list-group-item">Date Of Birth</li>
-                <li class="list-group-item">Status</li>
-                <li class="list-group-item">Season Appearance</li>
-              </ul>
-              <div class="col-md-8 md-6">
 
-                <button type="button" class="btn btn-success">More Info</button>
+ <ul class="list-group" style="background-color: red;">
+  <li *ngFor="let char of characters" (click)="selectCharecter(char)" >
+    {{ char.name }}
+  </li>
+ </ul>
 
-            </div>
+ <div>
+   {{selectedCharecter | json}}
+
+   {{selectedCharecter.name}}
+   
+ </div>
+
+
+
+ <div class="center">
+  <ul class="list-group">
+    <li class="list-group-item active" aria-current="true">An active item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </ul>
+</div>
+
+
+
+
+{{selectedCharecter.img}}
+<div class="row">
+<div class="card" style="width: 18rem;">
+
+  <img class="card-img-top" src={{selectedCharecter.img}} alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src={{selectedCharecter.img}} alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
+</div>
+</div>
+ 
