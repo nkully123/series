@@ -31,7 +31,7 @@ h1 {
   .block {
     margin: 20px;
     border-radius: 4px;
-    width: 60rem;
+    width:15rem;
     min-height: 430px;
     background: #fff;
     padding: 23px;
@@ -43,5 +43,61 @@ h1 {
         -ms-flex-direction: column;
             flex-direction: column;
     box-shadow: 0 2px 55px rgba(0,0,0,0.1);
+  }
+  .body-block {
+    margin: 300px;
+    border-radius: 4px;
+    width:100%;
+    min-height: 430px;
+    background: #fff;
+    
+    padding-left: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    box-shadow: 0 2px 55px rgba(0,0,0,0.1);
+   
+  }
+ 
+  .split {
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+    background-color:white;
+  }
+  
+  /* Control the right side */
+  .right {
+
+    right: 0;
+    background-color:gray;
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  /* Style the image inside the centered container, if needed */
+  .centered img {
+    width: 200%;
+    border-radius: 50%;
   }
   
