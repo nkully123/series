@@ -9,12 +9,14 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SerchComponent } from './serch/serch.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DetailsComponent,
+    SerchComponent,
   ],
   imports: [
     BrowserModule,
