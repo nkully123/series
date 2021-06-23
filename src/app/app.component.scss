@@ -1,25 +1,120 @@
-/* Application-wide Styles */
-
+* Application-wide Styles 
 h1 {
     color: rgb(234, 238, 241);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 250%;
+    text-align: center;
   }
-  h2, h3 {
-    color: rgb(68, 68, 68);
+  h2,h5, h3,p {
+    color: rgb(96, 78, 136);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
   }
+
+  li {
+    color: rgb(96, 78, 136);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+  }
+  
   body {
-    margin: 2em;
-    background-color: lightblue;
-    
+    margin: 25%;
+    background-image:'https://upload.wikimedia.org/wikipedia/en/6/61/Breaking_Bad_title_card.png';
+
   }
   body, input[type="text"], button {
-    color: rgb(219, 8, 8);
+    color: rgb(243, 236, 236);
     font-family: Cambria, Georgia, serif;
+  }
+  /* everywhere else */
+
+  * {
+    font-family: Arial, Helvetica, sans-serif;
   } 
-
-
-  
+  .body{
+    background-image: 'https://upload.wikimedia.org/wikipedia/en/6/61/Breaking_Bad_title_card.png';
+  }
+  .block {
+    margin: 220px;
+    border-radius: 4px;
+    width:100px;
+    height: 100px;
+    background: #fff;
+    padding: 23px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    box-shadow: 0 2px 55px rgba(0,0,0,0.1);
+  }
+  .body-block {
+    margin: 300px;
+    border-radius: 4px;
+    width:100%;
+    min-height: 430px;
+    background: #fff;
+    
+    padding-left: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    box-shadow: 0 2px 55px rgba(0,0,0,0.1);
+   
+  }
  
+  .split {
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+    background-color:white;
+  }
+  
+  /* Control the right side */
+  .right {
+
+    right: 0;
+    background-color:gray;
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  /* Style the image inside the centered container, if needed */
+  .centered img {
+    width: 200%;
+    border-radius: 50%;
+  }
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .row{
+    color: gray;
+    height: 100%;
+  }
+  
+  

@@ -9,21 +9,31 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SelectedComponent } from './selected/selected.component';
+import { GetServiceService } from './getService.service';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DetailsComponent,
+    SelectedComponent,
+    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    GetServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
