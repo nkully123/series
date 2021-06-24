@@ -1,30 +1,30 @@
-<div class="split left">
-  <div class = "block">
-    <h1 style="color: black;">Characters</h1>
-    <li *ngFor="let char of characters" (click)="selectCharecter(char)" >
-      {{ char.name }}
-    </li>
-  </div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <ul class="list-group">
+    <a href="">Home</a>
+    <a href="">About</a>
+    <a href="">Seasons</a>
+  </ul>
 </div>
-
-<div class="split right">
-  <div style="background-image:url('https://images.theconversation.com/files/32113/original/zddchmvm-1380482556.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip'); height:100vh;">
-
-    <h1 style="color: whitesmoke;text-align: center;">THE BREAKING BAD CAST </h1>
-    <div class="col-md-9 offset-md-4">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src={{selectedCharecter.img}} alt="Card image cap">
-        <div class="card-body">
-         <strong><h5 class="card-title">{{selectedCharecter.name}}</h5></strong> 
-           <label> Nick Name :  </label><span>{{selectedCharecter.name}}</span> <br>
-           <label> Date Of Birth :  </label><span>{{selectedCharecter.birthday}}</span> <br>
-           <label> Status :  </label><span>{{selectedCharecter.status}}</span> <br>
-           <label> Seassions :  </label><span>{{selectedCharecter.appearance}}</span> <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm" *ngFor="let character of characters" (click)="selectCharecter(character)">
+        <div class="card" style="width: 18rem;">
+          <img src={{character.img}} class="card-img-top" alt="...">
+          <div class="card-body">
+            <a routerLink="/selected"><p  class="card-text">{{character.name}}</p>
+            </a></div>
         </div>
-    </div>
+      </div>
     </div>
   </div>
+  
 
-  </div>
+  
  
+  
+  
+  
+  
 

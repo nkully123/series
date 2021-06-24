@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DetailService } from '../detail.service';
+import { GetServiceService } from '../getService.service';
 
 @Component({
   selector: 'app-details',
@@ -10,19 +12,9 @@ export class DetailsComponent implements OnInit
 {
 
   characters:any[];
-  selectedCharecter:any;
-
-
-
-
   refinedCharacterInfo:any[];
 
-
-
-
-
-
-  constructor(private detailService:DetailService) { }
+  constructor(private detailService:DetailService,private selected:GetServiceService, private router: Router ) { }
   
   ngOnInit(): void 
   {
@@ -31,8 +23,7 @@ export class DetailsComponent implements OnInit
       console.log(this.characters)
 
 
-      for (let index = 0; index < this.characters.length; index++) 
-      {
+      for (let index = 0; index < this.characters.length; index++){
         this.refinedCharacterInfo = this.characters[index];
         
       }
@@ -41,8 +32,24 @@ export class DetailsComponent implements OnInit
   }
   
   selectCharecter(cast:any){
-    console.log(cast);
-    this.selectedCharecter =cast;
+    this.selected.getSelectedCharacter(cast)
+
+    this.router.navigate(['/selected'])
+
   }
+  
+  openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  
+  
+  
+ 
+  
+  
   
 }
