@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 })
 export class DetailService {
 
-  url:string = "https://breakingbadapi.com/api/characters/";
+  url:string = "https://breakingbadapi.com/api/characters";
 
 
   constructor(private http: HttpClient) { }
@@ -16,5 +16,12 @@ export class DetailService {
   get(){
   
     return this.http.get(this.url);
+  }
+
+  serchingPerson(character:any)
+  {
+    return this.http.get(`${this.url}?name=${character.name}`)
+    // return this.http.get("https://breakingbadapi.com/api/characters?name="+character.nameToSearch);
+    
   }
 }
