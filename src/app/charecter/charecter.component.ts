@@ -13,6 +13,7 @@ export class CharecterComponent implements OnInit {
 
   Character :any[];
   ngOnInit(): void {
+    
     this.Character  = this.selected.showCharacter() ;
     // 
     console.log(this.Character);

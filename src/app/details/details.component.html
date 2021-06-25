@@ -7,19 +7,18 @@
     <a href="">Seasons</a>
   </ul>
 </div>
-  <!-- <div class="container">
-    <div class="row">
-      <div class="col-sm" *ngFor="let character of characters" (click)="selectCharecter(character)">
-        <div class="card" >
-          <img src={{character.img}} class="card-img-top" alt="...">
-          <div class="card-body">
-            <a routerLink="/selected"><p  class="card-text">{{character.name}}</p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
+
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand"></a>
+    <h1 style="text-align: center;">THE BREAKING BAD CAST</h1> 
+    <form class="d-flex input-group w-auto" [formGroup]="searchForm">
+      <input formControlName="name"  type="text" aria-label="Search">
+      <a routerLink="/selected"> <button  (click)="submit1()" type="button"  mdbBtn color="light" mdbWavesEffect>Seach Character</button></a>
+    </form>
+  </div>
+</nav>
+
   <div class="row">
     <div class="col-sm-4 py-2" *ngFor="let character of characters" (click)=openModel(character)>
         <div class="card card-body ">
@@ -29,7 +28,7 @@
             </a></div>
         </div>
     </div>
-    </div>
+  </div>
     
 
   

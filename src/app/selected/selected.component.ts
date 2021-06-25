@@ -11,11 +11,12 @@ export class SelectedComponent implements OnInit {
 
 
   Character:any;
-  constructor(private selected:GetServiceService,public modalRef:MDBModalRef) { }
+  constructor(public selected:GetServiceService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void 
+  {
    
-    this.Character = this.selected.showCharacter();
+    this.Character = this.selected.getFounder();
     
   }
 
