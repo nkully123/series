@@ -1,20 +1,25 @@
 <mdb-card>
     <!--Card image-->
-    <mdb-card-img src={{this.selected.showCharacter().img}} alt="Card image cap"></mdb-card-img>
+    
+    <!--<mdb-card-img  alt="Card image cap"></mdb-card-img >-->
+
+      <mdb-card-img src={{this.selected.showCharacter().img}} alt="Card image cap"   class="cardimg"></mdb-card-img>
+
     <!--Card content-->
     <mdb-card-body>
+
   
       <!--Title-->
       <mdb-card-title>
-        <h4>{{this.selected.showCharacter().name}}</h4>
+        <h4 style="color: aquamarine;">{{this.selected.showCharacter().name}}</h4>
       </mdb-card-title>
   
       <!--Text-->
       <mdb-card-text>
-        <p class="card-text">Date of birth : {{this.selected.showCharacter().birthday}}</p>
-        <p class="card-text"><small class="text-muted">Season appeard :{{this.selected.showCharacter().appearance}}</small></p>
-        <p class="card-text"><small class="text-muted">status :{{this.selected.showCharacter().status}}</small></p>
-        <p class="card-text"><small class="text-muted">Occupation :{{this.selected.showCharacter().occupation}}</small></p>
+        <p style="color: aquamarine;" class="card-text">Date of birth : {{this.selected.showCharacter().birthday}}</p>
+        <p style="color: aquamarine;" class="card-text"><small class="text-muted">Season appeard :{{this.selected.showCharacter().appearance}}</small></p>
+        <p style="color: aquamarine;" class="card-text"><small class="text-muted">status :{{this.selected.showCharacter().status}}</small></p>
+        <p style="color: aquamarine;" class="card-text"><small class="text-muted">Occupation :{{this.selected.showCharacter().occupation}}</small></p>
       </mdb-card-text>
   
       <a href="#" mdbBtn color="primary" mdbWavesEffect>Back</a>
