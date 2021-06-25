@@ -7,10 +7,10 @@
     <a href="">Seasons</a>
   </ul>
 </div>
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
       <div class="col-sm" *ngFor="let character of characters" (click)="selectCharecter(character)">
-        <div class="card" style="width: 18rem;">
+        <div class="card" >
           <img src={{character.img}} class="card-img-top" alt="...">
           <div class="card-body">
             <a routerLink="/selected"><p  class="card-text">{{character.name}}</p>
@@ -18,8 +18,18 @@
         </div>
       </div>
     </div>
-  </div>
-  
+  </div> -->
+  <div class="row">
+    <div class="col-sm-4 py-2" *ngFor="let character of characters" (click)=openModel(character)>
+        <div class="card card-body ">
+          <img src={{character.img}} class="card-img-top" alt="...">
+          <div class="card-body">
+            <a ><p  class="d-block p-2 bg-dark text-white">{{character.name}}</p>
+            </a></div>
+        </div>
+    </div>
+    </div>
+    
 
   
  

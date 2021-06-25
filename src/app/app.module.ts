@@ -14,6 +14,7 @@ import { SelectedComponent } from './selected/selected.component';
 import { GetServiceService } from './getService.service';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { CharecterComponent } from './charecter/charecter.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
     DetailsComponent,
     SelectedComponent,
     SelectedComponent,
+    CharecterComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,7 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [
     GetServiceService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[SelectedComponent,CharecterComponent]
 })
 export class AppModule { }

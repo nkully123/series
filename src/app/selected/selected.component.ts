@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MDBModalRef } from 'angular-bootstrap-md';
 import { GetServiceService } from '../getService.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class SelectedComponent implements OnInit {
 
 
   Character:any;
-  constructor(private selected:GetServiceService) { }
+  constructor(private selected:GetServiceService,public modalRef:MDBModalRef) { }
 
   ngOnInit(): void {
    
