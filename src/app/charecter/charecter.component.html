@@ -11,15 +11,17 @@
   
       <!--Title-->
       <mdb-card-title>
-        <h4 style="color: aquamarine;">{{this.selected.showCharacter().name}}</h4>
+        <h1 style="color: aquamarine;">{{this.selected.showCharacter().name}}</h1>
       </mdb-card-title>
   
       <!--Text-->
       <mdb-card-text>
-        <p style="color: aquamarine;" class="card-text">Date of birth : {{this.selected.showCharacter().birthday}}</p>
-        <p style="color: aquamarine;" class="card-text"><small class="text-muted">Season appeard :{{this.selected.showCharacter().appearance}}</small></p>
-        <p style="color: aquamarine;" class="card-text"><small class="text-muted">status :{{this.selected.showCharacter().status}}</small></p>
-        <p style="color: aquamarine;" class="card-text"><small class="text-muted">Occupation :{{this.selected.showCharacter().occupation}}</small></p>
+        <h4 style="color: aquamarine;">Season appeard :{{this.selected.showCharacter().appearance}}</h4>
+        <h4 style="color: aquamarine;">status :{{this.selected.showCharacter().status}}</h4>
+        <h4 style="color: aquamarine;">Occupation :{{this.selected.showCharacter().occupation}}</h4>
+        <h4 style="color: aquamarine;">Date of birth : {{this.selected.showCharacter().birthday}}</h4>
+
+
       </mdb-card-text>
   
       <a href="#" mdbBtn color="primary" mdbWavesEffect>Back</a>
